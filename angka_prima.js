@@ -8,6 +8,8 @@ function angkaPrima(angka) {
 
 	if (angka === 2) {
 		isPrime = true;
+	} else if (angka === 1) {
+		isPrime = false;
 	} else {
 		for (var i = 2; i <= angka-1; i++) {
 			if (angka % i === 0) {
