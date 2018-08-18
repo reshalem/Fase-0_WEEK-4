@@ -31,7 +31,6 @@ function tukarBesarKecil(kalimat) {
 	}
 
 	var fix_result = result.join(' ');
-
 	return fix_result;
 }
 
