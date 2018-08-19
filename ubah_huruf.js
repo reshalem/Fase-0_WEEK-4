@@ -6,19 +6,17 @@
 
 function ubahHuruf(kata) {
 	var kamus = 'abcdefghijklmnopqrstuvwxyz';
-	var arrKamus = kamus.split('');
-	var kata_split = kata.split('');
 	var indexHuruf;
 	var result = [];
 
-	for (var i = 0; i < kata_split.length; i++) {
-		for (var j = 0; j < arrKamus.length; j++) {
-			if (kata_split[i] === arrKamus[j]) {
-				if (kata_split[i] === 'z') {
-					result.push(arrKamus[0]);
+	for (var i = 0; i < kata.length; i++) {
+		for (var j = 0; j < kamus.length; j++) {
+			if (kata[i] === kamus[j]) {
+				if (kata[i] === 'z') {
+					result.push(kamus[0]);
 				} else {
 					indexHuruf = j;
-					result.push(arrKamus[indexHuruf+1]);
+					result.push(kamus[indexHuruf+1]);
 				}
 			}
 		}
@@ -28,6 +26,7 @@ function ubahHuruf(kata) {
 	return fix_result;	
 }
 
+console.log(ubahHuruf('zoz')); // apa
 console.log(ubahHuruf('wow')); // xpx
 console.log(ubahHuruf('developer')); // efwfmpqfs
 console.log(ubahHuruf('javascript')); // kbwbtdsjqu

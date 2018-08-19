@@ -7,16 +7,16 @@
 
 function digitPerkalianMinimum(angka) {
 	var result = [];
-	var tempPembagi = 0;
-	var str_tempPembagi = '';
+	var tempHasilBagi = 0;
+	var str_tempHasilBagi = '';
 	var digit_perkalian = 0;
 
 	for (var i = 1; i <= angka; i++) {
 		if (angka % i === 0) {
-			tempPembagi = angka/i;
+			tempHasilBagi = angka/i;
 			iString = i.toString();
-			str_tempPembagi = tempPembagi.toString();
-			digit_perkalian = iString.length + str_tempPembagi.length;
+			str_tempHasilBagi = tempHasilBagi.toString();
+			digit_perkalian = iString.length + str_tempHasilBagi.length;
 
 			result.push(digit_perkalian);
 		}
@@ -30,7 +30,7 @@ function digitPerkalianMinimum(angka) {
 		}
 	}
 
-	return min;
+	return result;
 }
 
 console.log(digitPerkalianMinimum(24)); // 2

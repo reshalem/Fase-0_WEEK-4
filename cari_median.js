@@ -17,7 +17,7 @@ function cariMedian(arr) {
 		index_medianOdd = (arr.length - 1) / 2;
 		median = arr[index_medianOdd];
 	} else if (arr.length % 2 === 0) {
-		index_medianUpEven = Math.round(arr.length/2);
+		index_medianUpEven = arr.length/2;
 		index_medianDownEven = Math.floor((arr.length - 1)/2);
 		median = (arr[index_medianUpEven] + arr[index_medianDownEven]) / 2;
 	}
